@@ -59,28 +59,30 @@ export default function ResultPage() {
         };
     };
 
-    const shareToInstagram = () => {
+    const shareToInstagram = async () => {
         if (!updatedImage) return;
-        const blob = dataURLtoBlob(updatedImage);
-        const file = new File([blob], "shared-image.png", { type: "image/png" });
-
-        const formData = new FormData();
-        formData.append("file", file);
         
-        const instagramIntent = `intent://story_camera#Intent;package=com.instagram.android;scheme=https;end;`;
-        window.location.href = instagramIntent;
-    };
-
-    const dataURLtoBlob = (dataURL) => {
-        const byteString = atob(dataURL.split(",")[1]);
-        const mimeString = dataURL.split(",")[0].split(":")[1].split(";")[0];
-        const arrayBuffer = new ArrayBuffer(byteString.length);
-        const uint8Array = new Uint8Array(arrayBuffer);
-        for (let i = 0; i < byteString.length; i++) {
-            uint8Array[i] = byteString.charCodeAt(i);
+        try {
+            // Data URL을 Blob으로 변환
+            const blob = await (await fetch(updatedImage)).blob();
+            const file = new File([blob], "shared-image.png", { type: "image/png" });
+    
+            // `navigator.canShare()`를 사용해 공유 가능 여부 확인
+            if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                await navigator.share({
+                    title: "내 결과 공유",
+                    text: "나와 닮은 위인은?",
+                    files: [file], // 파일을 직접 공유
+                });
+                console.log("✅ 공유 성공!");
+            } else {
+                console.error("⚠️ 이 브라우저에서는 파일 공유를 지원하지 않습니다.");
+            }
+        } catch (error) {
+            console.error("⚠️ 공유 실패:", error);
         }
-        return new Blob([uint8Array], { type: mimeString });
     };
+    
 
     return (
         <div className={styles.page}>
