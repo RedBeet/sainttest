@@ -63,23 +63,21 @@ export default function ResultPage() {
         if (!updatedImage) return;
         
         try {
-            // Data URL을 Blob으로 변환
             const blob = await (await fetch(updatedImage)).blob();
             const file = new File([blob], "shared-image.png", { type: "image/png" });
     
-            // `navigator.canShare()`를 사용해 공유 가능 여부 확인
             if (navigator.canShare && navigator.canShare({ files: [file] })) {
                 await navigator.share({
                     title: "내 결과 공유",
                     text: "나와 닮은 위인은?",
-                    files: [file], // 파일을 직접 공유
+                    files: [file],
                 });
-                console.log("✅ 공유 성공!");
+                console.log("SUCCESS");
             } else {
-                console.error("⚠️ 이 브라우저에서는 파일 공유를 지원하지 않습니다.");
+                console.error("ERR: FILE SHARE NOT SUPPORTED");
             }
         } catch (error) {
-            console.error("⚠️ 공유 실패:", error);
+            console.error("FAILED:", error);
         }
     };
     
