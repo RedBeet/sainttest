@@ -25,6 +25,10 @@
   -webkit-background-clip: text;
 }
 
+.logo {
+  height: 90px;
+}
+
 .catholicClub {
   font-family: 'Pretendard-Thin';
   font-size: 16px;

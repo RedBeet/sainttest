@@ -7,8 +7,7 @@ console.log(styles.sedtua)
 function ClubTitle() {
   return (
     <div className={styles.mainTitle}>
-      <div className={styles.sedtua}>SED-TUA</div>
-      <div className={styles.catholicClub}>CATHOLIC CLUB</div>
+      <img src="/snr.png" className={styles.logo} />
     </div>
   )
 }
@@ -27,8 +26,8 @@ function Home() {
         <button className={styles.button} onClick={() => router.push('http://agnus.or.kr/home/')}>
           천주교 대전교구 청소년국 바로가기
         </button>
-        <button className={styles.button} onClick={() => router.push('/sedtua')}>
-          SED-TUA 알아보기
+        <button className={styles.button} onClick={() => router.push('/sanarae')}>
+          사나래 알아보기
         </button>
       </div>
     </div>

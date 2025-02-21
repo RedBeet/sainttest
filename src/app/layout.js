@@ -3,7 +3,7 @@ import { TestProvider } from "./context/context";
 import "./globals.css";
 
 export const metadata = {
-  title: "::SED-TUA::",
+  title: "::사나래::",
   description: "2025년 봄 동아리박람회",
   icons: {
     icon: "/favicon.svg",
