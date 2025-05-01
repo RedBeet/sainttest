@@ -6,7 +6,7 @@
 }
 
 .mainTitle {
-  margin-top: 10vh;
+  margin-top: 5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,19 +29,13 @@
   height: 14vh;
 }
 
-.catholicClub {
-  font-family: 'Pretendard-Thin';
-  font-size: 16px;
-  line-height: 19px;
-  color: #2B5B8C;
-}
 
 .cross {
-  margin-top: 6.34vh;
+  margin-top: 3.1vh;
   height: 36vh;
   object-fit: contain;
   width:auto;
-  margin-bottom: 6.34vh;
+  margin-bottom: 3.1vh;
 }
 
 .buttonSet {
