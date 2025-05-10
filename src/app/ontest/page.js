@@ -5,7 +5,7 @@ import { useTest } from "../context/context";
 import { questions } from '../data';
 import styles from './page.module.css';
 
-function TestHeader ({ page, total }) {
+function TestHeader ({ page, total, router }) {
     return (
     <div className={styles.testHeader}>
         <div onClick={() => router.back()} className={styles.goBack}>
@@ -55,12 +55,12 @@ export default function Test () {
             router.push("/result");
         }
     };
-    
+
     const { scale, question, answers } = questions[idx];
-    
+
     return (
         <div className={styles.page}>
-            <TestHeader page={idx + 1} total={questions.length} />
+            <TestHeader page={idx + 1} total={questions.length} router={router} />
             <div className={styles.question}>{question}</div>
             <Answers contents={answers} scale={scale} handleAnswer={handleAnswer} />
         </div>
