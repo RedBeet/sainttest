@@ -1,0 +1,34 @@
+const fs = require('fs');
+const C = {
+  S: {
+    V: {
+      I: {
+        name: "St. Andrew Kim Tae-gon",
+        summary: "The first priest of Joseon",
+        description: "St. Andrew Kim Tae-gon (1821-1846) is the first Catholic priest of Joseon who dedicated his entire life to protecting and propagating the faith. Amidst the persecution of the Joseon era, he devoted himself to defending the traditions and teachings of the Church and protecting the faith community. Moreover, in Joseon where priests were scarce, he actively preached the gospel and highly valued administering sacraments and teaching doctrine to believers. He did not stop at simple preaching but directly served the needs of the faithful. Through the sacraments, he cared for the community and strove to lay the foundation for the Joseon Church. He prioritized defending the faith within the community above all else, helping believers remain steadfast despite persecution. His sacrifice and faith became the roots of the Korean Church, continuing to deeply inspire many today.",
+        imageSrc: "/img/StKimAndr.png"
+      },
+      E: {
+        name: "Gregor Mendel",
+        summary: "The father of genetics",
+        description: "Gregor Mendel (1822-1884) was a priest and pioneer of genetics who pursued truth through scholarship while preserving his faith, contributing to the Church and the development of science through teaching and service. As a religious, he cherished the traditions and values of the Church, believing that studying God's order of creation was a way to a deeper understanding of faith. Furthermore, he actively disseminated knowledge and emphasized that science and faith could be harmonized. He taught students and conducted research at the monastery, preaching the importance of education and scholarship. He practiced a life of service for the community not just through experiments and research, but also by sharing knowledge with his brothers and dedicating himself to the growth of the faith community. His research became the foundation of modern genetics, serving as an enduring model of harmony between faith and academia.",
+        imageSrc: "/img/GregMendel.png"
+      }
+    },
+    D: {
+      I: {
+        name: "Ven. Thomas Choe Yang-eop",
+        summary: "Pillar of the Joseon Church",
+        description: "Ven. Thomas Choe Yang-eop (1821-1861) was a priest who dedicated his life to protecting the faith, preaching the gospel, and leading the Church through persecution. He spent his life firmly defending the traditions and teachings of the Church and protecting the faith community during the severe persecutions of the Joseon era. Furthermore, as priests were lacking in Joseon, he actively preached the gospel by administering sacraments and teaching doctrine. He traveled secretly throughout Joseon to meet and encourage believers, dedicating his energy to safeguarding the community. As a leader, he guided the faithful and played a pivotal role in strengthening the community through the sacraments. His pastoral work laid deep roots within the Church, as he devoted himself until the end to ensure believers would not abandon their faith. His sacrifice serves as the firm foundation of the Joseon Church and remains a model of devotion.",
+        imageSrc: "/img/VenChoiTh.png"
+      },
+      E: {
+        name: "St. Catherine of Alexandria",
+        summary: "Defender of the Faith",
+        description: "St. Catherine of Alexandria (287-305) was a saint who firmly defended her faith, preached the gospel with scholarship and wisdom, and protected the Church as a leader. Amidst persecution, she unfailingly defended the Church's teachings and devoted herself to championing the Christian faith. With her exceptional erudition, she debated pagan philosophers, proving the truth of the faith and actively preaching the gospel. Her strong conviction and persuasiveness led many to convert, and she played a crucial role in defending the Church. She bravely stood before her persecutors for her faith and ultimately walked the path of martyrdom. Her faith and wisdom continue to inspire many today, serving as a shining model of harmony between scholarship and faith.",
+        imageSrc: "/img/StCatharina.png"
+      }
+    }
+  }
+};
+fs.writeFileSync('C:\\Users\\jason\\Desktop\\sainttest\\enC1.json', JSON.stringify(C), 'utf8');

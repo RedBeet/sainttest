@@ -342,32 +342,128 @@ export const saints = {
   },
 },
   en: {
-  C: {
-    S: {
-      V: { I: { name: 'St. Andrew Kim Tae-gon', summary: 'The first priest of Joseon', description: 'St. Andrew Kim Tae-gon (1821-1846) is the first Catholic priest of Joseon who dedicated his life to protecting and propagating the faith amidst persecution. He valued administering sacraments and teaching doctrines to believers.', imageSrc: '/img/StKimAndr.png' },
-           E: { name: 'Gregor Mendel', summary: 'The father of genetics', description: 'Gregor Mendel (1822-1884) was a priest and pioneer of genetics who pursued truth through scholarship while keeping his faith. He emphasized the harmony of science and faith.', imageSrc: '/img/GregMendel.png' } },
-      D: { I: { name: 'Ven. Thomas Choe Yang-eop', summary: 'Pillar of the Joseon Church', description: 'Ven. Thomas Choe Yang-eop (1821-1861) was a priest who dedicated his life to protecting the faith and preaching the gospel amidst the severe persecution of Joseon.', imageSrc: '/img/VenChoiTh.png' },
-           E: { name: 'St. Catherine of Alexandria', summary: 'Defender of the Faith', description: 'St. Catherine of Alexandria (287-305) firmly defended the faith and preached the gospel with her scholarship and wisdom despite persecution.', imageSrc: '/img/StCatharina.png' } }
+  "C": {
+    "S": {
+      "V": {
+        "I": {
+          "name": "St. Andrew Kim Tae-gon",
+          "summary": "The first priest of Joseon",
+          "description": "St. Andrew Kim Tae-gon (1821-1846) is the first Catholic priest of Joseon who dedicated his entire life to protecting and propagating the faith. Amidst the persecution of the Joseon era, he devoted himself to defending the traditions and teachings of the Church and protecting the faith community. Moreover, in Joseon where priests were scarce, he actively preached the gospel and highly valued administering sacraments and teaching doctrine to believers. He did not stop at simple preaching but directly served the needs of the faithful. Through the sacraments, he cared for the community and strove to lay the foundation for the Joseon Church. He prioritized defending the faith within the community above all else, helping believers remain steadfast despite persecution. His sacrifice and faith became the roots of the Korean Church, continuing to deeply inspire many today.",
+          "imageSrc": "/img/StKimAndr.png"
+        },
+        "E": {
+          "name": "Gregor Mendel",
+          "summary": "The father of genetics",
+          "description": "Gregor Mendel (1822-1884) was a priest and pioneer of genetics who pursued truth through scholarship while preserving his faith, contributing to the Church and the development of science through teaching and service. As a religious, he cherished the traditions and values of the Church, believing that studying God's order of creation was a way to a deeper understanding of faith. Furthermore, he actively disseminated knowledge and emphasized that science and faith could be harmonized. He taught students and conducted research at the monastery, preaching the importance of education and scholarship. He practiced a life of service for the community not just through experiments and research, but also by sharing knowledge with his brothers and dedicating himself to the growth of the faith community. His research became the foundation of modern genetics, serving as an enduring model of harmony between faith and academia.",
+          "imageSrc": "/img/GregMendel.png"
+        }
+      },
+      "D": {
+        "I": {
+          "name": "Ven. Thomas Choe Yang-eop",
+          "summary": "Pillar of the Joseon Church",
+          "description": "Ven. Thomas Choe Yang-eop (1821-1861) was a priest who dedicated his life to protecting the faith, preaching the gospel, and leading the Church through persecution. He spent his life firmly defending the traditions and teachings of the Church and protecting the faith community during the severe persecutions of the Joseon era. Furthermore, as priests were lacking in Joseon, he actively preached the gospel by administering sacraments and teaching doctrine. He traveled secretly throughout Joseon to meet and encourage believers, dedicating his energy to safeguarding the community. As a leader, he guided the faithful and played a pivotal role in strengthening the community through the sacraments. His pastoral work laid deep roots within the Church, as he devoted himself until the end to ensure believers would not abandon their faith. His sacrifice serves as the firm foundation of the Joseon Church and remains a model of devotion.",
+          "imageSrc": "/img/VenChoiTh.png"
+        },
+        "E": {
+          "name": "St. Catherine of Alexandria",
+          "summary": "Defender of the Faith",
+          "description": "St. Catherine of Alexandria (287-305) was a saint who firmly defended her faith, preached the gospel with scholarship and wisdom, and protected the Church as a leader. Amidst persecution, she unfailingly defended the Church's teachings and devoted herself to championing the Christian faith. With her exceptional erudition, she debated pagan philosophers, proving the truth of the faith and actively preaching the gospel. Her strong conviction and persuasiveness led many to convert, and she played a crucial role in defending the Church. She bravely stood before her persecutors for her faith and ultimately walked the path of martyrdom. Her faith and wisdom continue to inspire many today, serving as a shining model of harmony between scholarship and faith.",
+          "imageSrc": "/img/StCatharina.png"
+        }
+      }
     },
-    F: {
-      V: { I: { name: 'Fr. John Lee Tae-seok', summary: 'Schweitzer of Sudan', description: 'Fr. John Lee Tae-seok (1962-2010) was a medical doctor and priest who spread the love of God through sharing and volunteering. He established a hospital and school in Tonj, Sudan.', imageSrc: '/img/LeeIo.png' },
-           E: { name: 'St. Nicholas', summary: 'Saint of Love and Sharing', description: 'St. Nicholas (270-343) is the real-life model of Santa Claus who secretly helped those in need with a warm heart and charity.', imageSrc: '/img/StNicolaus.png' } },
-      D: { I: { name: 'Bl. Alexius Hwang Sa-yeong', summary: 'Martyr for Faith and Justice', description: 'Bl. Alexius Hwang Sa-yeong (1775-1801) was a scholar and martyr who devoted himself to establishing the foundation of the Joseon Church and requested pastoral support from the Pope.', imageSrc: '/img/BtHwangSim.png' },
-           E: { name: 'St. Hedwig of Silesia', summary: 'Mother of the Poor', description: 'St. Hedwig of Silesia (1174-1243) dedicated her life to helping the poor and sick, actively engaging in charity works as a noblewoman.', imageSrc: '/img/StHedvigesSil.png' } }
+    "F": {
+      "V": {
+        "I": {
+          "name": "Fr. John Lee Tae-seok",
+          "summary": "Schweitzer of Sudan",
+          "description": "Fr. John Lee Tae-seok (1962-2010) was a clergyman who firmly upheld the teachings of the faith and practiced God's love through deep reflection and service. As both a priest and a medical doctor, he lived a dedicated life using his talents solely for God and his neighbors. He reflected on his faith through deep prayer and meditation, and based on this, committed himself to serving and caring for those in need. He lived out his faith and love by treating and educating patients in Sudan, a place of extreme poverty and poor medical conditions. In particular, he focused on spreading the faith within the church community, administering sacraments, and looking after the faithful. The life of love and sacrifice he left behind continues to inspire many today, standing as a true model of faith and service.",
+          "imageSrc": "/img/LeeIo.png"
+        },
+        "E": {
+          "name": "St. Nicholas",
+          "summary": "Saint of Love and Sharing",
+          "description": "St. Nicholas (270-343) was a bishop who defended the traditions and teachings of the Church while practicing God's love through deep reflection and active service. Through continuous prayer and meditation, he solidified his faith and sought to embody its essence. Furthermore, he engaged in active charitable works to help those in need, becoming widely known as the patron saint of the poor and children. He secretly provided aid without seeking recognition, embodying the virtue of charity through direct action rather than words. His life teaches us that faith is made complete through acts of love, and his charitable deeds serve as an enduring exemplar of true giving.",
+          "imageSrc": "/img/StNicolaus.png"
+        }
+      },
+      "D": {
+        "I": {
+          "name": "Bl. Alexius Hwang Sa-yeong",
+          "summary": "Martyr for Faith and Justice",
+          "description": "Bl. Alexius Hwang Sa-yeong (1775-1801) was a lay leader who dedicated himself to protecting the faith and strengthening the community's foundations through deep reflection. Amidst persecution, he researched Catholic doctrine and worked to protect the Church. He penned the 'Silk Letter' (Baekseo) to seek protection for the Joseon Church and to request the dispatch of priests, making devoted efforts to overcome the community's crisis. He emphasized inner faith and sought to realize his beliefs through practical assistance. Ultimately martyred for his faith, he remained steadfast in his devotion to the Church and its followers. His profound faith and dedication remain a lasting inspiration, demonstrating the true spirit of defending the community.",
+          "imageSrc": "/img/BtHwangSim.png"
+        },
+        "E": {
+          "name": "St. Hedwig of Silesia",
+          "summary": "Mother of the Poor",
+          "description": "St. Hedwig of Silesia (1174-1243) practiced her faith through deep reflection and dedicated her life to helping the poor and sick. Rather than enjoying the wealth of her noble status, she led an austere life based on continuous prayer and meditation, deepening her faith. She established hospitals and monasteries to actively care for those in need, living out God's love. She went beyond mere charity, personally providing aid and bringing comfort and hope. Her life serves as a beautiful testimony to how faith and active service can be harmonized, inspiring many to follow the path of true charity.",
+          "imageSrc": "/img/StHedvigesSil.png"
+        }
+      }
     }
   },
-  R: {
-    S: {
-      V: { I: { name: 'St. John Bosco', summary: 'Father and Teacher of Youth', description: 'St. John Bosco (1815-1888) devoted his life to educating and guiding youth, demonstrating God\'s love through preventive education.', imageSrc: '/img/StIoBosco.png' },
-           E: { name: 'St. Ignatius of Loyola', summary: 'Founder of the Society of Jesus', description: 'St. Ignatius of Loyola (1491-1556) founded the Society of Jesus and reformed the Church with strict spiritual training and obedience.', imageSrc: '/img/StIgnatius.png' } },
-      D: { I: { name: 'St. John Chrysostom', summary: 'The Golden-Mouthed Preacher', description: 'St. John Chrysostom (347-407) was a renowned preacher known for his eloquent sermons. He boldly criticized the corruption of high-ranking officials.', imageSrc: '/img/StIoChrysostomus.png' },
-           E: { name: 'St. Pope John Paul II', summary: 'Father of Modern Catholicism', description: 'St. Pope John Paul II (1920-2005) led the reform of the modern Catholic Church, actively using media and public speeches to propagate the faith worldwide.', imageSrc: '/img/StIoPaII.png' } }
+  "R": {
+    "S": {
+      "V": {
+        "I": {
+          "name": "St. John Bosco",
+          "summary": "Father and Teacher of Youth",
+          "description": "St. John Bosco (1815-1888) was an educator and priest who dedicated his life to reforming the Church and guiding youth through love and active service. Breaking away from traditional educational methods, he introduced the 'Preventive System' emphasizing love, reason, and faith, helping young people grow correctly. He actively engaged with youth in the streets and society, practicing the gospel by listening to them and providing guidance. He established the Salesian Society to create a safe environment and provide education for young people. His devotion left a profound impact both within and outside the Church, becoming a lasting model of educational and pastoral reform.",
+          "imageSrc": "/img/StIoBosco.png"
+        },
+        "E": {
+          "name": "St. Ignatius of Loyola",
+          "summary": "Founder of the Society of Jesus",
+          "description": "St. Ignatius of Loyola (1491-1556) founded the Society of Jesus and played a crucial role in reforming the Church, defending the faith, and spreading the gospel worldwide. He advocated for a renewed approach to faith based on the 'Spiritual Exercises', emphasizing inner growth and practical action. Through rigorous training and obedience, he fortified the faith and led a movement to revive the Church. He actively engaged in external missionary work, establishing schools and universities to emphasize education and scholarly exploration. His leadership and reform efforts laid a solid foundation for the Catholic Church to adapt to the changing times.",
+          "imageSrc": "/img/StIgnatius.png"
+        }
+      },
+      "D": {
+        "I": {
+          "name": "St. John Chrysostom",
+          "summary": "The Golden-Mouthed Preacher",
+          "description": "St. John Chrysostom (347-407) was an outstanding preacher and Church leader who sought to reform the Church and clearly convey the teachings of the faith. Known as the 'Golden-Mouthed', his eloquent sermons sharply criticized the corruption of high-ranking officials and urged a return to true faith. He deeply studied the Scriptures to provide clear and practical guidance, emphasizing a life of charity and justice. Despite facing exile for his uncompromising stance, he remained dedicated to the spiritual purity of the community. His teachings continue to serve as a profound foundation for Church liturgy and doctrine.",
+          "imageSrc": "/img/StIoChrysostomus.png"
+        },
+        "E": {
+          "name": "St. Pope John Paul II",
+          "summary": "Father of Modern Catholicism",
+          "description": "St. Pope John Paul II (1920-2005) was a reformative pope who led the modernization of the Catholic Church while preserving the essence of the faith. He actively engaged with the world, utilizing mass media and public speeches to propagate the gospel and communicate with people globally. He established the World Youth Day to draw young people to the faith and tirelessly championed human rights and freedom against oppression. His strong leadership and commitment to dialogue fostered harmony between faith and society, leaving a legacy that deeply resonates across generations.",
+          "imageSrc": "/img/StIoPaII.png"
+        }
+      }
     },
-    F: {
-      V: { I: { name: 'St. Thérèse of Lisieux', summary: 'Apostle of Love', description: 'St. Thérèse of Lisieux (1873-1897) practiced her faith through deep reflection and small daily acts of love, known as the \'Little Way\'.', imageSrc: '/img/StTheresiaLex.png' },
-           E: { name: 'St. Francis of Assisi', summary: 'Saint of Poverty and Humility', description: 'St. Francis of Assisi (1181-1226) emphasized evangelical life and reform, finding God\'s love through poverty and humility.', imageSrc: '/img/StFranciscusAs.png' } },
-      D: { I: { name: 'St. Paul Chong Ha-sang', summary: 'Pioneer of the Joseon Church', description: 'St. Paul Chong Ha-sang (1795-1839) was a lay leader who dedicated himself to laying the foundation of the Joseon Catholic Church and requested priests from the Pope.', imageSrc: '/img/StChongPa.png' },
-           E: { name: 'St. Thomas Aquinas', summary: 'Master of Catholic Theology', description: 'St. Thomas Aquinas (1225-1274) opened new horizons in Catholic theology by harmonizing faith and reason through his profound scholarship.', imageSrc: '/img/StThAquinas.png' } }
+    "F": {
+      "V": {
+        "I": {
+          "name": "St. Thérèse of Lisieux",
+          "summary": "Apostle of Love",
+          "description": "St. Thérèse of Lisieux (1873-1897) practiced her faith through profound inner reflection and small acts of love, known as the 'Little Way'. She sought spiritual reform by emphasizing that holiness could be achieved through humble, everyday actions rather than grand deeds. Within the Carmel monastery, she devoted herself to serving her sisters through continuous prayer and sacrifice, dedicating her life to love. Her mission was realized not through external activities, but through a deep, internal commitment to praying for the world and the Church. Her modest yet profound path of love remains one of the most inspiring models of modern spirituality.",
+          "imageSrc": "/img/StTheresiaLex.png"
+        },
+        "E": {
+          "name": "St. Francis of Assisi",
+          "summary": "Saint of Poverty and Humility",
+          "description": "St. Francis of Assisi (1181-1226) drove Church reform by choosing a life of radical poverty and humility, bringing the gospel directly to the marginalized. Forsaking his wealth, he sought unity with God through deep prayer and living closely with the poor and outcast. He led by example, actively working to restore the Church to its true evangelical roots. His deep love extended to all of creation, promoting harmony between humanity and nature. His life of simplicity and active compassion continues to profoundly influence those seeking the true meaning of the gospel.",
+          "imageSrc": "/img/StFranciscusAs.png"
+        }
+      },
+      "D": {
+        "I": {
+          "name": "St. Paul Chong Ha-sang",
+          "summary": "Pioneer of the Joseon Church",
+          "description": "St. Paul Chong Ha-sang (1795-1839) was a pioneer of the Joseon Catholic Church who dedicated himself to building the community's foundation and reforming its structure. Amidst severe persecution, he believed the Church needed a strong, self-reliant basis. He took the innovative step of writing directly to the Pope to request the dispatch of priests, showing remarkable leadership. He focused on strengthening the internal organization of the faithful and providing vital religious education. His unwavering devotion and ultimate martyrdom fortified the roots of the Korean Church, standing as a monumental example of lay leadership.",
+          "imageSrc": "/img/StChongPa.png"
+        },
+        "E": {
+          "name": "St. Thomas Aquinas",
+          "summary": "Master of Catholic Theology",
+          "description": "St. Thomas Aquinas (1225-1274) was a master of Catholic theology who opened new horizons by harmonizing faith and reason. As a reformative thinker, he integrated Aristotelian philosophy with Christian doctrine, successfully systematizing the Church's teachings for a new era. Through deep contemplation and rigorous study, he authored monumental works like the 'Summa Theologica'. As a theological leader, he nurtured countless students and established an intellectual foundation that reached far beyond the Church into the broader world. His profound insights continue to be the bedrock of Catholic philosophy and theology today.",
+          "imageSrc": "/img/StThAquinas.png"
+        }
+      }
     }
   }
 }
