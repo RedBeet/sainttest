@@ -1,4 +1,5 @@
-"use client";
+const fs = require('fs');
+let code = `"use client";
 import { useRouter } from "next/navigation";
 import Link from 'next/link';
 import { useTest } from "./context/context";
@@ -40,11 +41,7 @@ export function LanguageToggle() {
                 position: 'absolute', 
                 top: 20, 
                 right: 20, 
-                width: '120px',
-                height: '56px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
+                padding: '15px 30px', 
                 zIndex: 1000, 
                 cursor: 'pointer', 
                 background: 'rgba(255,255,255,0.7)', 
@@ -53,11 +50,14 @@ export function LanguageToggle() {
                 color: '#000',
                 fontSize: '18px',
                 fontWeight: 'bold',
-                boxSizing: 'border-box',
-                padding: 0
+                width: '120px',
+                textAlign: 'center',
+                boxSizing: 'border-box'
             }}
         >
             {language === "ko" ? "ENG" : "한국어"}
         </button>
     );
 }
+`;
+fs.writeFileSync('C:\\Users\\jason\\Desktop\\sainttest\\src\\app\\components.js', code, 'utf8');

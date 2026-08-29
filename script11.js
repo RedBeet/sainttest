@@ -1,4 +1,5 @@
-"use client";
+const fs = require('fs');
+let code = `"use client";
 import { useRef, useState, useMemo } from "react";
 import { GotoHome, LanguageToggle } from "../components";
 import { useTest } from "../context/context";
@@ -137,3 +138,5 @@ export default function ResultPage() {
     </div>
   );
 }
+`;
+fs.writeFileSync('C:\\Users\\jason\\Desktop\\sainttest\\src\\app\\result\\page.js', code, 'utf8');

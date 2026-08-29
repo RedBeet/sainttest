@@ -1,4 +1,5 @@
-"use client";
+const fs = require('fs');
+let code = `"use client";
 import styles from "./page.module.css";
 import { GotoHome, LanguageToggle } from "../components";
 import { useRouter } from "next/navigation";
@@ -43,10 +44,10 @@ export default function SedTua() {
       desc: (
         <>
           🙏 [What is Sanarae?] <br />
-          As the only Catholic club at KAIST, founded in 1986, we are a &apos;faith community&apos; where love continues to this day! The club&apos;s name, &apos;Sanarae&apos;, means angel&apos;s wings. How about taking a moment to stop running endlessly for worldly satisfaction and become little angels practicing love while cherishing the time with God through &apos;Sanarae&apos;? <br />{" "}
+          As the only Catholic club at KAIST, founded in 1986, we are a 'faith community' where love continues to this day! The club's name, 'Sanarae', means angel's wings. How about taking a moment to stop running endlessly for worldly satisfaction and become little angels practicing love while cherishing the time with God through 'Sanarae'? <br />{" "}
           <br />
           🦋 [Members of Sanarae?] <br />
-          We hold regular meetings every Monday at 9 PM during the semester, sharing our experiences of God during the week and exchanging happiness! Also, once a week, members align their schedules during free time for Myeongnyebang activities, reading and meditating on the Sunday Gospel together! Moreover, through the &apos;Youth Bible Study&apos;, we strive to &apos;listen&apos; to God&apos;s words from Genesis and Exodus and practice them in our lives. We also participate in the youth group activities at Gungdong Cathedral, practicing faith and service together! <br />
+          We hold regular meetings every Monday at 9 PM during the semester, sharing our experiences of God during the week and exchanging happiness! Also, once a week, members align their schedules during free time for Myeongnyebang activities, reading and meditating on the Sunday Gospel together! Moreover, through the 'Youth Bible Study', we strive to 'listen' to God's words from Genesis and Exodus and practice them in our lives. We also participate in the youth group activities at Gungdong Cathedral, practicing faith and service together! <br />
           <br />
           🌈 [Various Activities of Sanarae] <br />
           We begin and end each semester at school with the opening and closing Mass. We also have various activities such as Strawberry Party, Manito, Feast Day Celebrations, MTs and trips, and choir performances! Furthermore, members who are available attend the youth Mass together every Sunday, spend fun times at the cathedral and club room, and share happiness!
@@ -79,3 +80,5 @@ export default function SedTua() {
     </div>
   );
 }
+`;
+fs.writeFileSync('C:\\Users\\jason\\Desktop\\sainttest\\src\\app\\sanarae\\page.js', code, 'utf8');

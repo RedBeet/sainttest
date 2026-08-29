@@ -1,4 +1,5 @@
-"use client";
+const fs = require('fs');
+let code = `"use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { GotoHome, LanguageToggle } from "../components";
@@ -87,3 +88,5 @@ export default function StartPoint() {
     </div>
   );
 }
+`;
+fs.writeFileSync('C:\\Users\\jason\\Desktop\\sainttest\\src\\app\\saint\\page.js', code, 'utf8');

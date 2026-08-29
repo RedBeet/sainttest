@@ -1,4 +1,5 @@
-"use client";
+const fs = require('fs');
+let code = `"use client";
 import { createContext, useContext, useState, useEffect } from "react";
 
 const TestContext = createContext();
@@ -28,3 +29,5 @@ export const TestProvider = ({ children }) => {
 };
 
 export const useTest = () => useContext(TestContext);
+`;
+fs.writeFileSync('C:\\Users\\jason\\Desktop\\sainttest\\src\\app\\context\\context.js', code, 'utf8');

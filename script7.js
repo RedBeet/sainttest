@@ -1,4 +1,5 @@
-"use client";
+const fs = require('fs');
+let code = `"use client";
 import { useRouter } from "next/navigation";
 import Cross from "../../public/cross.svg";
 import { ReactComponent as Logo } from "../../public/via_logo.svg";
@@ -42,13 +43,13 @@ function Home() {
           {texts[language].btn1}
         </button>
         <button
-          className={`${styles.button} ${styles.csng}`}
+          className={\`\${styles.button} \${styles.csng}\`}
           onClick={() => router.push("http://agnus.or.kr/home/")}
         >
           {texts[language].btn2}
         </button>
         <button
-          className={`${styles.button} ${styles.viabtn}`}
+          className={\`\${styles.button} \${styles.viabtn}\`}
           onClick={() => router.push("/sanarae")}
         >
           {texts[language].btn3}
@@ -59,3 +60,5 @@ function Home() {
 }
 
 export default Home;
+`;
+fs.writeFileSync('C:\\Users\\jason\\Desktop\\sainttest\\src\\app\\page.js', code, 'utf8');
