@@ -10,14 +10,18 @@
   },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
+<<<<<<< HEAD
     "next": "^16.1.6",
+=======
+    "next": "^15.5.12",
+>>>>>>> 6c1999a0ec4221c03ccb2f1a46f5c802d323fa20
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
-    "eslint-config-next": "15.1.6",
+    "eslint-config-next": "^15.5.12",
     "webpack-dev-server": "^5.2.1"
   }
 }

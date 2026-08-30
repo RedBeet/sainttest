@@ -1,4 +1,5 @@
-"use client";
+const fs = require('fs');
+let code = `"use client";
 import { useRouter } from "next/navigation";
 import Link from 'next/link';
 import { useTest } from "./context/context";
@@ -61,3 +62,5 @@ export function LanguageToggle() {
         </button>
     );
 }
+`;
+fs.writeFileSync('C:\\Users\\jason\\Desktop\\sainttest\\src\\app\\components.js', code, 'utf8');

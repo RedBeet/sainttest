@@ -1,0 +1,32 @@
+{
+  "S": {
+    "V": {
+      "I": {
+        "name": "St. John Bosco",
+        "summary": "Father and Teacher of Youth",
+        "description": "St. John Bosco (1815-1888) is a saint who dedicated himself to the education and faith of poor youth. Amidst the social changes of his time, he broke away from strict discipline and introduced the 'Preventive System' based on love and trust, practicing reformative education to help young people find the right path. Additionally, he actively propagated the gospel and used theater, music, and writing to make the faith easier to accept. Going beyond simple teaching, he lived and served directly with the youth, fulfilling their needs. To this end, he established churches, schools, and vocational training centers, emphasizing activities within the church community, and helped the youth deeply connect with God through faith education and the sacraments. His mission continues today through the Salesian Society, standing as a model of innovative pastoral work combining faith and education.",
+        "imageSrc": "/img/StIoBosco.png"
+      },
+      "E": {
+        "name": "St. Ignatius of Loyola",
+        "summary": "Founder of the Society of Jesus",
+        "description": "St. Ignatius (1491-1556) was born in the Basque region of Spain. While serving as a soldier in his youth, he was injured in the Battle of Pamplona and experienced a conversion while reading religious books during his recovery. Afterward, he continued a deep life of faith, engaging in spiritual exercises in Montserrat and Manresa. Together with six companions in Paris, he founded the Society of Jesus, which received official approval from Pope Paul III in 1540. He authored a spiritual guidebook titled the 'Spiritual Exercises', providing spiritual direction to many. The Society of Jesus contributed significantly to the renewal of the Catholic Church through education, missionary work, and charitable activities.",
+        "imageSrc": "/img/StIgnatius.png"
+      }
+    },
+    "D": {
+      "I": {
+        "name": "St. John Chrysostom",
+        "summary": "The Golden-Mouthed Preacher",
+        "description": "St. John Chrysostom (347-407) was born in Antioch, Syria. After studying legal philosophy and homiletics, he was baptized in 369. He subsequently deepened his faith by living an ascetic life with hermits. Ordained as a priest in 386, he gained renown for his exceptional preaching, earning the epithet 'Golden-Mouthed'. Later appointed as the Bishop of Constantinople, he engaged in active pastoral work, such as establishing shelters for the poor and hospices for the sick, and dispatching missionaries to foreign regions. However, by criticizing the luxury and corruption of high-ranking clergy and officials, he incurred the Empress's enmity, ultimately being exiled twice and passing away during his second exile. His writings, sermons, and biblical commentaries continue to have a profound impact today. His status is especially absolute in the Eastern Orthodox Church, which primarily uses the liturgy he refined.",
+        "imageSrc": "/img/StIoChrysostomus.png"
+      },
+      "E": {
+        "name": "St. Pope John Paul II",
+        "summary": "Father of Modern Catholicism",
+        "description": "St. Pope John Paul II (1920-2005) was a reformative pope who led the modernization of the Catholic Church, championing the transformation of the Church to fit the times while preserving the essence of the faith. He was a pope who traveled the world, preaching the faith and communicating with the masses. Furthermore, he propagated the gospel with strong leadership, actively utilizing public speeches and mass media. Notably, he established World Youth Day (WYD) to draw young people to the faith. He also fought for human rights and freedom outside the Church, practicing his faith against communism and dictatorship. His achievements remain a model of harmonizing faith and society to this day.",
+        "imageSrc": "/img/StIoPaII.png"
+      }
+    }
+  }
+}

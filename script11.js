@@ -1,4 +1,5 @@
-"use client";
+const fs = require("fs");
+let code = `"use client";
 import { useRef, useState, useMemo } from "react";
 import { GotoHome, LanguageToggle } from "../components";
 import { useTest } from "../context/context";
@@ -27,10 +28,7 @@ function getResult(traits, language) {
 
 export default function ResultPage() {
   const { userName, traits, language } = useTest();
-  const { result, resTrait } = useMemo(
-    () => getResult(traits, language),
-    [traits, language],
-  );
+  const { result, resTrait } = useMemo(() => getResult(traits, language), [traits, language]);
 
   const canvasRef = useRef(null);
   const [updatedImage, setUpdatedImage] = useState(null);
@@ -41,63 +39,45 @@ export default function ResultPage() {
       resultTitle: "님과 닮은 위인은",
       shareBtn: "인스타그램으로 공유하기",
       shareTitle: "내 결과 공유",
-      shareText: "나와 닮은 위인은?",
+      shareText: "나와 닮은 위인은?"
     },
     en: {
       resultTitle: "'s resembling saint is",
       shareBtn: "Share to Instagram",
       shareTitle: "Share my result",
-      shareText: "Which saint resembles me?",
-    },
+      shareText: "Which saint resembles me?"
+    }
   };
 
   const t = texts[language];
 
   const generateImage = (newName) => {
     setIsCanvasVisible(false);
-
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     const img = new Image();
-
     const loadFont = async () => {
       const font = new FontFace(
         "Pretendard-Medium",
-        "url(https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff)",
+        "url(https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff)"
       );
-
       await font.load();
       document.fonts.add(font);
     };
 
-    const isKorean = language === "ko";
-
-    // 언어별 이미지 경로
-    img.src = `/img/share/${isKorean ? "ko" : "en"}/${resTrait}.png`;
-
-    img.onload = async () => {
-      await loadFont();
-
+    img.src = "/img/share/" + resTrait + ".png";
+    img.onload = () => {
       canvas.width = img.width;
       canvas.height = img.height;
 
       ctx.drawImage(img, 0, 0, img.width, img.height);
 
-      // 언어별 폰트 크기
-      ctx.font = `${isKorean ? 16 : 14}px 'Pretendard-Medium'`;
+      ctx.font = "16px 'Pretendard-Medium'";
       ctx.fillStyle = "#1E1E1E";
       ctx.textAlign = "center";
-      ctx.textBaseline = "top";
-
-      // 언어별 텍스트
-      const shareStr = isKorean
-        ? `${newName}님과 닮은 위인은`
-        : `${newName}'s resembling saint is`;
-
-      // Figma 기준 y 좌표
-      const textY = isKorean ? 32 : 29;
-
-      ctx.fillText(shareStr, img.width / 2, textY);
+      
+      const shareStr = language === "ko" ? newName + "님과 닮은 위인은" : newName + "'s resembling saint is";
+      ctx.fillText(shareStr, img.width / 2, 200);
 
       const newImage = canvas.toDataURL("image/png");
       setUpdatedImage(newImage);
@@ -134,10 +114,7 @@ export default function ResultPage() {
         <GotoHome />
       </div>
       <div className={styles.title}>
-        <div className={styles.userName}>
-          {userName}
-          {t.resultTitle}
-        </div>
+        <div className={styles.userName}>{userName}{t.resultTitle}</div>
         <div className={styles.saintName}>{result.name}</div>
       </div>
       <img src={result.imageSrc} className={styles.saintImg} />
@@ -161,3 +138,9 @@ export default function ResultPage() {
     </div>
   );
 }
+`;
+fs.writeFileSync(
+  "C:\\Users\\jason\\Desktop\\sainttest\\src\\app\\result\\page.js",
+  code,
+  "utf8",
+);

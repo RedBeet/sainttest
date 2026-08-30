@@ -1,4 +1,5 @@
-"use client";
+const fs = require('fs');
+let code = `"use client";
 import styles from "./page.module.css";
 import { GotoHome, LanguageToggle } from "../components";
 import { useRouter } from "next/navigation";
@@ -79,3 +80,5 @@ export default function SedTua() {
     </div>
   );
 }
+`;
+fs.writeFileSync('C:\\Users\\jason\\Desktop\\sainttest\\src\\app\\sanarae\\page.js', code, 'utf8');

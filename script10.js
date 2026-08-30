@@ -1,4 +1,5 @@
-"use client";
+const fs = require('fs');
+let code = `"use client";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useTest } from "../context/context";
@@ -76,3 +77,5 @@ export default function Test() {
     </div>
   );
 }
+`;
+fs.writeFileSync('C:\\Users\\jason\\Desktop\\sainttest\\src\\app\\ontest\\page.js', code, 'utf8');
