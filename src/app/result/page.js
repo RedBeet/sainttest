@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState, useMemo } from "react";
+import { useRef, useState, useMemo, useEffect } from "react";
 import { GotoHome, LanguageToggle } from "../components";
 import { useTest } from "../context/context";
 import { saints } from "../data";
@@ -33,7 +33,8 @@ export default function ResultPage() {
   );
 
   const canvasRef = useRef(null);
-  const [updatedImage, setUpdatedImage] = useState(null);
+  const shareImageRef = useRef(null);
+  const fontPromiseRef = useRef(null);
   const [isCanvasVisible, setIsCanvasVisible] = useState(false);
 
   const texts = {
@@ -53,78 +54,101 @@ export default function ResultPage() {
 
   const t = texts[language];
 
-  const generateImage = (newName) => {
+  useEffect(() => {
+    const font = new FontFace(
+      "Pretendard-Medium",
+      "url(https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff)",
+    );
+
+    fontPromiseRef.current = font.load().then((loadedFont) => {
+      document.fonts.add(loadedFont);
+    });
+  }, []);
+
+  useEffect(() => {
+    const isKorean = language === "ko";
+    const img = new Image();
+
+    shareImageRef.current = null;
+
+    img.src = `/img/share/${isKorean ? "ko" : "en"}/${resTrait}.png`;
+
+    img.onload = () => {
+      shareImageRef.current = img;
+    };
+  }, [language, resTrait]);
+
+  const generateImage = async (newName) => {
     setIsCanvasVisible(false);
 
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    const img = new Image();
 
-    const loadFont = async () => {
-      const font = new FontFace(
-        "Pretendard-Medium",
-        "url(https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff)",
-      );
+    if (fontPromiseRef.current) {
+      await fontPromiseRef.current;
+    }
 
-      await font.load();
-      document.fonts.add(font);
-    };
+    let img = shareImageRef.current;
+
+    if (!img) {
+      const isKorean = language === "ko";
+
+      img = new Image();
+      img.src = `/img/share/${isKorean ? "ko" : "en"}/${resTrait}.png`;
+
+      await new Promise((resolve, reject) => {
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+
+      shareImageRef.current = img;
+    }
 
     const isKorean = language === "ko";
 
-    // 언어별 이미지 경로
-    img.src = `/img/share/${isKorean ? "ko" : "en"}/${resTrait}.png`;
+    canvas.width = img.width;
+    canvas.height = img.height;
 
-    img.onload = async () => {
-      await loadFont();
+    ctx.drawImage(img, 0, 0, img.width, img.height);
 
-      canvas.width = img.width;
-      canvas.height = img.height;
+    // 언어별 폰트 크기
+    ctx.font = `${isKorean ? 16 : 14}px 'Pretendard-Medium'`;
+    ctx.fillStyle = "#1E1E1E";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "top";
 
-      ctx.drawImage(img, 0, 0, img.width, img.height);
+    // 언어별 텍스트
+    const shareStr = isKorean
+      ? `${newName}님과 닮은 위인은`
+      : `${newName}'s resembling saint is`;
 
-      // 언어별 폰트 크기
-      ctx.font = `${isKorean ? 16 : 14}px 'Pretendard-Medium'`;
-      ctx.fillStyle = "#1E1E1E";
-      ctx.textAlign = "center";
-      ctx.textBaseline = "top";
+    // Figma 기준 y 좌표
+    const textY = isKorean ? 32 : 29;
 
-      // 언어별 텍스트
-      const shareStr = isKorean
-        ? `${newName}님과 닮은 위인은`
-        : `${newName}'s resembling saint is`;
+    ctx.fillText(shareStr, img.width / 2, textY);
 
-      // Figma 기준 y 좌표
-      const textY = isKorean ? 32 : 29;
+    canvas.toBlob(async (blob) => {
+      if (!blob) return;
 
-      ctx.fillText(shareStr, img.width / 2, textY);
-
-      const newImage = canvas.toDataURL("image/png");
-      setUpdatedImage(newImage);
-      shareToInstagram();
-    };
-  };
-
-  const shareToInstagram = async () => {
-    if (!updatedImage) return;
-
-    try {
-      const blob = await (await fetch(updatedImage)).blob();
-      const file = new File([blob], "shared-image.png", { type: "image/png" });
-
-      if (navigator.canShare && navigator.canShare({ files: [file] })) {
-        await navigator.share({
-          title: t.shareTitle,
-          text: t.shareText,
-          files: [file],
+      try {
+        const file = new File([blob], "shared-image.png", {
+          type: "image/png",
         });
-        console.log("SUCCESS");
-      } else {
-        console.error("ERR: FILE SHARE NOT SUPPORTED");
+
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          await navigator.share({
+            title: t.shareTitle,
+            text: t.shareText,
+            files: [file],
+          });
+          console.log("SUCCESS");
+        } else {
+          console.error("ERR: FILE SHARE NOT SUPPORTED");
+        }
+      } catch (error) {
+        console.error("FAILED:", error);
       }
-    } catch (error) {
-      console.error("FAILED:", error);
-    }
+    }, "image/png");
   };
 
   return (
